@@ -1,0 +1,100 @@
+{
+	"ImportPath": "github.com/cinqict/havoc",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/chzyer/readline",
+			"Comment": "v1.4-38-gf6d7a1f",
+			"Rev": "f6d7a1f6fbf35bbf9beb80dc63c56a29dcfb759f"
+		},
+		{
+			"ImportPath": "github.com/ianr0bkny/go-sonos",
+			"Comment": "SONOS_6_2-2-g0565850",
+			"Rev": "0565850599534c8f557a5492e6550587cbc751e4"
+		},
+		{
+			"ImportPath": "github.com/ianr0bkny/go-sonos/didl",
+			"Comment": "SONOS_6_2-2-g0565850",
+			"Rev": "0565850599534c8f557a5492e6550587cbc751e4"
+		},
+		{
+			"ImportPath": "github.com/ianr0bkny/go-sonos/linn-co-uk",
+			"Comment": "SONOS_6_2-2-g0565850",
+			"Rev": "0565850599534c8f557a5492e6550587cbc751e4"
+		},
+		{
+			"ImportPath": "github.com/ianr0bkny/go-sonos/model",
+			"Comment": "SONOS_6_2-2-g0565850",
+			"Rev": "0565850599534c8f557a5492e6550587cbc751e4"
+		},
+		{
+			"ImportPath": "github.com/ianr0bkny/go-sonos/reciva-com",
+			"Comment": "SONOS_6_2-2-g0565850",
+			"Rev": "0565850599534c8f557a5492e6550587cbc751e4"
+		},
+		{
+			"ImportPath": "github.com/ianr0bkny/go-sonos/ssdp",
+			"Comment": "SONOS_6_2-2-g0565850",
+			"Rev": "0565850599534c8f557a5492e6550587cbc751e4"
+		},
+		{
+			"ImportPath": "github.com/ianr0bkny/go-sonos/upnp",
+			"Comment": "SONOS_6_2-2-g0565850",
+			"Rev": "0565850599534c8f557a5492e6550587cbc751e4"
+		},
+		{
+			"ImportPath": "github.com/inconshreveable/mousetrap",
+			"Rev": "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
+		},
+		{
+			"ImportPath": "github.com/juju/ansiterm",
+			"Rev": "35c59b9e0fe275705a71bf5d58ee293f27efbbc4"
+		},
+		{
+			"ImportPath": "github.com/juju/ansiterm/tabwriter",
+			"Rev": "35c59b9e0fe275705a71bf5d58ee293f27efbbc4"
+		},
+		{
+			"ImportPath": "github.com/lunixbochs/vtclean",
+			"Rev": "d14193dfc626125c831501c1c42340b4248e1f5a"
+		},
+		{
+			"ImportPath": "github.com/manifoldco/promptui",
+			"Comment": "v0.2.1-6-gabacd3c",
+			"Rev": "abacd3cb3a43b70945b80f52db03544f8b67d267"
+		},
+		{
+			"ImportPath": "github.com/manifoldco/promptui/list",
+			"Comment": "v0.2.1-6-gabacd3c",
+			"Rev": "abacd3cb3a43b70945b80f52db03544f8b67d267"
+		},
+		{
+			"ImportPath": "github.com/manifoldco/promptui/screenbuf",
+			"Comment": "v0.2.1-6-gabacd3c",
+			"Rev": "abacd3cb3a43b70945b80f52db03544f8b67d267"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-colorable",
+			"Comment": "v0.0.9-8-g6fcc0c1",
+			"Rev": "6fcc0c1fd9b620311d821b106a400b35dc95c497"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-isatty",
+			"Comment": "v0.0.3-7-g6ca4dbf",
+			"Rev": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c"
+		},
+		{
+			"ImportPath": "github.com/spf13/cobra",
+			"Rev": "5deb57bbca49eb370538fc295ba4b2988f9f5e09"
+		},
+		{
+			"ImportPath": "github.com/spf13/pflag",
+			"Rev": "9ff6c6923cfffbcd502984b8e0c80539a94968b7"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "d38bf781f16e180a1b2ad82697d2f81d7b7ecfac"
+		}
+	]
+}

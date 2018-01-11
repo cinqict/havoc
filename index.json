@@ -4,10 +4,84 @@
         "filename" : "pony.mp3"
     },
     {   "name" : "lunch",
-        "filename" : "Lunch.mp3"
+        "filename" : "lunch.mp3"
     },
     {  
         "name" : "waarheen",
         "filename" : "waarheen.mp3"
+    },
+    {
+        "name" : "authority",
+        "filename" : "authority.mp3"
+    },
+    {
+        "name" : "bmw",
+        "filename" : "bmw.mp3"
+    },{
+        "name" : "denhaag",
+        "filename" : "denhaag.mp3"
+    },{
+        "name" : "developers",
+        "filename" : "developers"
+    },{
+        "name" : "goahead",
+        "filename" : "goahead.mp3"
+    },{
+        "name" : "jeroen",
+        "filename" : "jeroen.mp3"
+    },{
+        "name" : "moggu",
+        "filename" : "moggu.mp3"
+    },{
+        "name" : "money",
+        "filename" : "money.mp3"
+    },{
+        "name" : "oetmorn",
+        "filename" : "oetmorn.mp3"
+    },{
+        "name" : "rule",
+        "filename" : "rule.mp3"
+    },{
+        "name" : "shania",
+        "filename" : "shania.mp3"
+    },{
+        "name" : "simply",
+        "filename" : "simpy.mp3"
+    },{
+        "name" : "900",
+        "filename" : "900yearsold.mp3"
+    },{
+        "name" : "allright",
+        "filename" : "aallrighty.mp3"
+    },{
+        "name" : "home",
+        "filename" : "cartman-going-home.mp3"
+    },{
+        "name" : "chewy",
+        "filename" : "chewy_roar.mp3"
+    },{
+        "name" : "force",
+        "filename" : "force.mp3"
+    },{
+        "name" : "imperial",
+        "filename" : "imperial_march.mp3"
+    },{
+        "name" : "jj",
+        "filename" : "Jarjar2.mp3"
+    },{
+        "name" : "r2d2",
+        "filename" : "R2D2-yeah.mp3"
+    },{
+        "name" : "destruct",
+        "filename" : "self-destruct-button.mp3"
+    },{
+        "name" : "starwars",
+        "filename" : "star-wars-theme-song.mp3"
+    },{
+        "name" : "luke",
+        "filename" : "swluke01.mp3"
+    },{
+        "name" : "sjoerd",
+        "filename" : "swvader01.mp3"
     }
 ]

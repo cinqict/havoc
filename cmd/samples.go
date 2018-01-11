@@ -51,3 +51,12 @@ func getSamplesFromS3() {
 
 	fmt.Println("samples loaded")
 }
+
+func getSampleList() []string {
+	var l []string
+	for _, s := range Samples {
+		l = append(l, s.Name)
+	}
+
+	return l
+}

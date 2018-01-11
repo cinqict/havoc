@@ -11,6 +11,7 @@ import (
 	sonos "github.com/ianr0bkny/go-sonos"
 	"github.com/ianr0bkny/go-sonos/ssdp"
 	"github.com/ianr0bkny/go-sonos/upnp"
+	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
 )
 
@@ -21,6 +22,11 @@ var RootCmd = &cobra.Command{
 var Shout = &cobra.Command{
 	Use: "shout",
 	Run: RunShout,
+}
+
+var List = &cobra.Command{
+	Use: "list",
+	Run: RunList,
 }
 
 // vars for flags
@@ -40,6 +46,7 @@ func init() {
 	RootCmd.PersistentFlags().StringVarP(&baseBucket, "basebucket", "b", "https://s3.eu-central-1.amazonaws.com/plpwavtest/", "basebucket")
 
 	RootCmd.AddCommand(Shout)
+	RootCmd.AddCommand(List)
 
 }
 
@@ -54,11 +61,15 @@ func Execute() {
 
 func RunShout(cmd *cobra.Command, args []string) {
 
-	if len(args) != 1 {
-		fmt.Printf("expecting one argument found %d", len(args))
+	var nm string
+
+	if len(args) == 1 {
+		nm = args[0]
+	} else {
+		nm = SingleSelector(getSampleList(), "select sample")
 	}
 
-	smp := getSampleFileName(args[0])
+	smp := getSampleFileName(nm)
 
 	mgr := ssdp.MakeManager()
 
@@ -159,4 +170,33 @@ func runSample(f string, v uint16, d ssdp.Device) {
 
 func getSecond(t string) (int, error) {
 	return strconv.Atoi(strings.Split(t, ":")[2])
+}
+
+func RunList(cmd *cobra.Command, args []string) {
+	fmt.Println("available samples")
+
+	for _, s := range Samples {
+		fmt.Printf("%s \n", s.Name)
+	}
+}
+
+func SingleSelector(i []string, l string) string {
+
+	if len(i) < 1 {
+		fmt.Println("No samples found")
+		os.Exit(1)
+	}
+	prompt := promptui.Select{
+		Label: l,
+		Items: i,
+	}
+
+	_, c, err := prompt.Run()
+
+	if err != nil {
+		fmt.Printf("Prompt failed %v\n", err)
+		return ""
+	}
+
+	return c
 }
