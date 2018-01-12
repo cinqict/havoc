@@ -29,6 +29,11 @@ var List = &cobra.Command{
 	Run: RunList,
 }
 
+var Scan = &cobra.Command{
+	Use: "scan",
+	Run: RunScan,
+}
+
 // vars for flags
 var volume uint16
 var wg sync.WaitGroup
@@ -45,6 +50,7 @@ func init() {
 	RootCmd.PersistentFlags().StringVarP(&interf, "interface", "i", "en0", "network interface to use for scan")
 	RootCmd.PersistentFlags().StringVarP(&baseBucket, "basebucket", "b", "https://s3.eu-central-1.amazonaws.com/plpwavtest/", "basebucket")
 
+	RootCmd.AddCommand(Scan)
 	RootCmd.AddCommand(Shout)
 	RootCmd.AddCommand(List)
 
@@ -199,4 +205,39 @@ func SingleSelector(i []string, l string) string {
 	}
 
 	return c
+}
+
+func RunScan(cmd *cobra.Command, args []string) {
+
+	mgr := ssdp.MakeManager()
+
+	// Discover()
+	//  eth0 := Network device to query for UPnP devices
+	// 11209 := Free local port for discovery replies
+	// false := Do not subscribe for asynchronous updates
+	mgr.Discover(interf, "11209", false)
+
+	// SericeQueryTerms
+	// A map of service keys to minimum required version
+	qry := ssdp.ServiceQueryTerms{
+		ssdp.ServiceKey("schemas-upnp-org-MusicServices"): -1,
+	}
+	// Look for the service keys in qry in the database of discovered devices
+
+	result := mgr.QueryServices(qry)
+	if devlist, has := result["schemas-upnp-org-MusicServices"]; has {
+
+		for _, dev := range devlist {
+			fmt.Println(dev.Name)
+
+		}
+	}
+
+	// s := sonos.Connect(d, nil, sonos.SVC_AV_TRANSPORT)
+	// for y, _ := range [10]struct{}{} {
+	// 	fmt.Println(y)
+	// 	spew.Dump(s.GetMediaInfo(0))
+	// }
+	wg.Wait()
+
 }
